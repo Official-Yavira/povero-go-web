@@ -1,21 +1,27 @@
-# POVERО GO — Web
+# POVERО GO — Web Prototype
 
-Progetto web indipendente per il gioco POVERО GO.
+Versione web prototipale in evoluzione. Repository separato dal progetto Unity mobile.
 
-## Anteprima locale
-Apri `index.html` con un browser moderno.
+## Funzioni presenti
+- Home e navigazione responsive
+- Forest Run 3D nel browser tramite Three.js: tre corsie, cambio corsia, salto, scivolata, ostacoli, monete, punteggio e game over
+- Scansione da fotocamera o galleria con risultato simulato
+- Bestiario con 12 specie, rarità e ruoli
+- Negozio cosmetico con crediti virtuali
+- Missioni e ricompense
+- Profilo e progressi salvati in localStorage
+- Classifica locale dimostrativa
 
-## Pubblicazione gratuita con GitHub Pages
-1. Apri il repository su GitHub.
-2. Vai in **Settings → Pages**.
-3. In **Build and deployment**, scegli **Deploy from a branch**.
-4. Seleziona branch **main** e cartella **/(root)**, poi **Save**.
-5. Attendi la pubblicazione: GitHub mostrerà l'indirizzo del sito nella stessa pagina.
+## Limiti da non confondere con funzioni attive
+Il riconoscimento AI non è collegato: la scansione assegna una specie dimostrativa. Account, database, sincronizzazione, classifica globale, pagamenti e protezione anti-abuso richiedono un backend e non sono attivi. I dati sono salvati solo nel browser corrente. La scena 3D usa geometrie procedurali temporanee: modelli premium, rig, animazioni e texture finali sono ancora da produrre.
 
-## Stato del prototipo
-- Interfaccia responsive per desktop e smartphone.
-- Home, cattura, bestiario e classifica.
-- Foto selezionata localmente nel browser.
-- Riconoscimento animale simulato: il risultato è casuale e NON è AI.
-- Punteggi e monete funzionano solo durante la sessione; non c'è ancora un database o un account.
-- Le classifiche sono dimostrative.
+## Avvio
+La pagina carica Three.js come modulo ES da CDN, quindi apri tramite GitHub Pages o un server statico locale (ad esempio Live Server), non con doppio clic su file://.
+
+## Struttura
+- index.html: schermate e struttura
+- style.css: interfaccia responsive
+- game.js: logica e scena Three.js
+
+## Pubblicazione
+Repository Settings → Pages → Deploy from a branch → main → /(root).
